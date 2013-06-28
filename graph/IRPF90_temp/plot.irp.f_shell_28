@@ -1,0 +1,12 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+print ('hi')
+
+array = []
+with open('/home/vijay/Documents/MATHS/graph/plt1.dat') as f:
+    for line in f:
+        array.append([float(j) for j in line.split()])
+f.close
+

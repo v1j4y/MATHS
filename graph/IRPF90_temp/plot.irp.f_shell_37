@@ -1,0 +1,21 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def wrapper(thelist):
+    for item in thelist:
+        yield(item[0],item[1],item[2])
+
+array = []
+with open('/home/vijay/Documents/MATHS/graph/plt1.dat') as f:
+    for line in f:
+        array.append([float(j) for j in line.split()])
+f.close
+
+for a,b in wrapper(array):
+    x.append(a)
+    y.append(b)
+
+np.savetxt('x.txt',x)
+np.savetxt('y.txt',y)
+

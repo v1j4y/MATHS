@@ -1,0 +1,4 @@
+
+python ./lt.py
+evince ./plot5.ps
+

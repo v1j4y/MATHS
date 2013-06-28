@@ -1,0 +1,23 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def wrapper(thelist):
+    for item in thelist:
+        yield(item[0],item[1],item[2])
+
+print ('hi')
+from scipy.interpolate import interp1d,interp2d,bisplrep,bisplev
+
+array = []
+with open('/home/vijay/Documents/MATHS/graph/plt1.dat') as f:
+    for line in f:
+        array.append([float(j) for j in line.split()])
+f.close
+
+for a1,b1,c1 in wrapper(array):
+    x1.append(a1)
+    y1.append(b1)
+
+plt.plot(x1,y1,'r.')
+plt.show()
